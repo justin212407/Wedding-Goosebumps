@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+
+@theme {
+  --color-ivory: #F8F5F0;
+  --color-gold: #C2A770;
+  --color-charcoal: #1E1E1E;
+  --color-white: #FFFFFF;
+
+  --font-playfair-display: "Playfair Display", serif;
+  --font-lora: "Lora", serif;
+  --font-cormorant: "Cormorant Garamond", serif;  
+
+  --text-h1: 4.5rem;
+  --text-h2: 3.5rem;
+  --text-h3: 2.5rem;
+  --text-h4: 2rem;
+  --text-h5: 1.5rem;
+  --text-h6: 1.25rem;
+  --text-base: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+@layer base {
+  html,
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    font-family: var(--font-lora);
+    font-size: var(--text-base);
+    line-height: 1.75;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair-display);
+    font-family: var(--font-newsreader);
+    color: var(--color-charcoal);
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+  }
+
+  h1 { font-size: var(--text-h1); }
+  h2 { font-size: var(--text-h2); }
+  h3 { font-size: var(--text-h3); }
+  h4 { font-size: var(--text-h4); }
+  h5 { font-size: var(--text-h5); }
+  h6 { font-size: var(--text-h6); }
+
+  p {
+    margin-bottom: 1em;
+    font-family: 'Inter', sans-serif;
+  }
+
+  a {
+    color: var(--color-gold);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: color-mix(in srgb, var(--color-gold) 80%, black);
+  }
+
+  /* Global Container for content */
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Section Padding */
+  .section-padding-y {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  /* Responsive breakpoints for consistency */
+  @breakpoint sm { /* min-width: 640px */ }
+  @breakpoint md { /* min-width: 768px */ }
+  @breakpoint lg { /* min-width: 1024px */ }
+  @breakpoint xl { /* min-width: 1280px */ }
+  @breakpoint 2xl { /* min-width: 1536px */ }
+
+  /* Utilities often used like text accents */
+  .text-accent {
+    color: var(--color-gold);
+  }
+
+  /* Subtle border treatment */
+  .border-subtle {
+    border-color: color-mix(in srgb, var(--color-charcoal) 10%, transparent);
+    border-width: 1px;
+  }
+}
+
+@font-face {
+  font-family: 'Epicene Display';
+  src: url('/fonts/EpiceneDisplay-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+/* put this AFTER the h1–h6 block */
+.font-epicene-display {
+  font-family: 'Epicene Display', serif;
+  font-weight: 300; /* optional: or set via Tailwind class */
+}
+
+.font-cormorant {
+  font-family: var(--font-cormorant);
+} 
+
+/* globals.css */
+@font-face {
+  font-family: 'Epicene Display Light';
+  src: url('/fonts/epicene-display-light.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
