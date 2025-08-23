@@ -35,16 +35,16 @@ export default function GallerySection() {
   const next = () => setGroupIndex((i) => (i === lastIndex ? 0 : i + 1));
 
   return (
-    <section className="bg-ivory py-24 lg:py-32">
+    <section className="bg-ivory pt-24 lg:pt-32 pb-12 lg:pb-16">
       {/* — Heading & intro copy */}
-      <div className="container mx-auto px-6 lg:px-8 text-center mb-16">
+      <div className="container mx-auto px-6 lg:px-8 text-center mb-1">
         {/* WE CREATE → Commuter Sans 400 */}
-        <h3 className="font-commuter-sans font-normal text-sm uppercase tracking-[0.3em] text-charcoal mb-6">
+        <h3 className="font-commuter-sans font-normal text-sm uppercase tracking-[0.3em] text-charcoal mb-1">
           WE CREATE
         </h3>
 
         {/* UNFORGETTABLE word only → Epicene Display Light 400 */}
-        <h2 className="font-[Epicene_Display] font-light uppercase text-charcoal text-4xl lg:text-5xl xl:text-6xl mb-8 leading-tight tracking-tight">
+        <h2 className="font-[Epicene_Display] font-light uppercase text-charcoal text-4xl lg:text-5xl xl:text-6xl mb-1 leading-tight tracking-tight">
         <span className="font-cormorant" style={{fontWeight: 60}}>unforgettable</span>{" "}
         <span className="font-cormorant" style={{fontWeight: 60}}>experiences</span>
         </h2>

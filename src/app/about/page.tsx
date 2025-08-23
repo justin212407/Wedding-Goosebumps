@@ -34,9 +34,9 @@ export default function AboutPage() {
       <section className="pt-0 pb-16 lg:pt-0 lg:pb-24 bg-ivory text-charcoal">
         {/* Full‑bleed wrapper that ignores the usual max‑width and padding */}
         <div className="w-screen relative left-1/2 -translate-x-1/2">
-          <div className="grid gap-8 lg:grid-cols-[600px_1fr] 2xl:grid-cols-[640px_1fr] items-start">
+          <div className="grid gap-18 lg:grid-cols-[600px_1fr] 2xl:grid-cols-[640px_1fr] items-start">
             {/* LEFT: big image, touches the viewport's left edge */}
-            <div className="relative h-[100vh] lg:h-[105vh] bg-[#efe9df]">
+            <div className="relative h-[100vh] lg:h-[100vh] bg-[#efe9df]">
               <Image
                 src="/about-page/slide1/main.jpg"
                 alt="Wedding Goosebumps"
@@ -51,7 +51,7 @@ export default function AboutPage() {
               {/* Optional wordmark area (centered, like your reference) */}
               <div className="text-center mb-8">
                 <h2 className="font-commuter-sans text-[13px] tracking-[0.3em] uppercase pt-4">
-                  WEDDING GOOSEBUMPS
+                WEDDING GOOSEBUMPS
                 </h2>
               </div>
 
@@ -81,7 +81,7 @@ export default function AboutPage() {
               {/* Headline + subcopy */}
               <div className="max-w-[680px]">
                 <h1 className="font-epicene-display font-light uppercase leading-[1.08] text-[36px] md:text-[48px] lg:text-[56px]">
-                  WEDDING <br /> GOOSEBUMPS
+                WEDDING  GOOSEBUMPS
                 </h1>
                 <p className="mt-4 font-commuter-sans text-[12px] md:text-[13px] uppercase tracking-[0.3em] text-charcoal/85">
                   FULL SERVICE DESTINATION WEDDING AND <br />
@@ -100,32 +100,54 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Slide 2 */}
-      <Slide>
-      <div className="grid gap-10 lg:grid-cols-[520px_1fr] items-center">
-  <div className="relative aspect-[3/4] bg-[#efe9df]">
-    <Image src="/about-page/slide2/Photo.jpg" alt="Ali Waris Khan" fill className="object-cover" />
+{/* Slide 2 */}
+<Slide>
+  <div className="mx-auto max-w-7xl px-6 lg:px-12">
+    <div className="grid gap-12 lg:grid-cols-[480px_1fr] items-start">
+      {/* Left image */}
+      <div className="relative aspect-[3/4] bg-[#efe9df]">
+        <Image
+          src="/about-page/slide2/Photo.jpg"
+          alt="Ali Waris Khan"
+          fill
+          className="object-cover"
+        />
+      </div>
+
+      {/* Right text column */}
+      <div className="max-w-[620px] mt-8">
+        <p className="font-cormorant italic text-[16px] md:text-[18px] text-charcoal/80 mb-6 ">
+          Ali has been creating luxury weddings and events since 2010
+        </p>
+
+        <p className="font-lora text-[15.5px] leading-[1.85] text-charcoal/90 mb-8">
+          With over 15 years in the luxury wedding world, Ali Waris Khan has become one of the
+          most trusted names in destination wedding planning and design across India and beyond.
+          His approach is rooted in a deep respect for each couple’s story, blending meticulous
+          planning with an intuitive sense of style and emotion. Over the years, he has built strong
+          relationships with the finest venues, artisans, and creative collaborators, ensuring every
+          celebration is not only flawlessly executed but also a true reflection of the couple’s
+          personality, heritage, and dreams.
+        </p>
+
+        <h2 className="font-epicene-display font-light uppercase text-[28px] md:text-[36px] leading-[1.15] tracking-wide mb-8">
+          His Approach To Wedding <span className="italic lowercase font-light">and</span> Design
+        </h2>
+
+        <p className="font-cormorant italic text-[15.5px] leading-[1.8] text-charcoal/80 mb-2">
+          Is different in that he offers his couples a truly hands-on experience. He accepts a
+          limited number of weddings per year, which allows him to give 100% of his attention to
+          each and every couple.
+        </p>
+        <p className="font-lora text-[15.5px] leading-[1.9] text-charcoal/90">
+          He is known for his inherent people skills, strong organization skills as well as
+          his design talents.
+        </p>
+      </div>
+    </div>
   </div>
-  <div>
-    <h3 className="font-newsreader text-[18px] md:text-[20px] italic text-charcoal/80 mb-8">
-      Ali has been creating luxury weddings and events since 2010
-    </h3>
-    <h2 className="font-epicene-display font-light uppercase text-[32px] md:text-[42px] leading-[1.1] mb-8">
-      His approach to wedding planning and design
-    </h2>
-    <p className="font-newsreader text-[16.5px] leading-[1.95] text-charcoal/90 mb-8">
-      With over 15 years in the luxury wedding world, Ali Waris Khan has become one of the most
-      trusted names in destination wedding planning and design across India and beyond. His approach
-      is rooted in a deep respect for each couple’s story, blending meticulous planning with an
-      intuitive sense of style and emotion. Over the years, he has built strong relationships with
-      the finest venues, artisans, and creative collaborators, ensuring every celebration is not only
-      flawlessly executed but also a true reflection of the couple’s personality, heritage, and
-      dreams. He offers a truly hands‑on experience, accepting a limited number of weddings per year
-      to give 100% attention to each couple.
-    </p>
-  </div>
-</div>
-      </Slide>
+</Slide>
+
 
 {/* Slide 3 — Framed statement panel (smaller version) */}
 <Slide>
@@ -135,13 +157,7 @@ export default function AboutPage() {
       {/* top divider with monogram */}
       <div className="flex items-center gap-6 mb-6">
         <div className="h-px flex-1 bg-charcoal/20" />
-        <span className="font-epicene-display italic text-2xl md:text-3xl text-[#B5A484]"><Image
-                src={LOGO_URL}
-                alt="Jennifer Fox logo"
-                fill
-                className="object-contain"
-                priority
-              /></span>
+        <span className="font-epicene-display italic text-2xl md:text-3xl text-[#B5A484]">WG</span>
         <div className="h-px flex-1 bg-charcoal/20" />
       </div>
 
@@ -188,7 +204,7 @@ export default function AboutPage() {
       </div>
 
       {/* TEXT BLOCK (label is pinned to its left) */}
-      <div className="relative px-6 lg:px-8">
+      <div className="relative px-6 lg:px-8 mt-35">
         {/* Pinned vertical label + underline */}
         {/* Pinned vertical label + underline */}
 {/* Pinned vertical label with full underline */}
@@ -344,10 +360,10 @@ export default function AboutPage() {
     </div>
 
     {/* Main text */}
-    <p className="uppercase tracking-[0.25em] text-[12px] text-charcoal/70 font-commuter-sans mb-3">
+    <p className="uppercase tracking-[0.25em] text-[12px] text-charcoal/70 font-commuter-sans mb-0.5">
       WE BELIEVE IN
     </p>
-    <h2 className="font-epicene-display text-[38px] md:text-[48px] leading-tight text-charcoal mb-4">
+    <h2 className="font-epicene-display text-[38px] md:text-[48px] leading-tight text-charcoal mb-1.5">
       APPROACHABILITY
     </h2>
     <p className="font-newsreader text-[16.5px] leading-[1.95] text-charcoal/90 max-w-3xl">

@@ -3,7 +3,6 @@ import Navigation from '@/components/sections/navigation';
 import OfferingsSection from '@/components/sections/offerings';
 import GallerySection from '@/components/sections/gallery';
 import ScrollVideo1 from '@/components/sections/scroll-video-1';
-import AboutSection from '@/components/sections/about';
 import ImageSection2025 from '@/components/sections/image-section-2025';
 import ServiceLevelSection from '@/components/sections/service-level';
 import ScrollVideo3 from '@/components/sections/scroll-video-3';

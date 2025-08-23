@@ -2,16 +2,16 @@ import React from "react";
 import Link from "next/link";
 
 const OfferingsSection = () => (
-  <section className="bg-ivory text-charcoal py-24 sm:py-32">
+  <section className="bg-ivory text-charcoal py-13 sm:py-23">
     <div className="max-w-4xl mx-auto px-8"> {/* equal margins: px controls sides */}
       {/* small uppercase heading + underline */}
       <h2 className="font-commuter-sans text-[13px] uppercase tracking-[0.3em] text-charcoal/80">
         ABOUT WEDDING GOOSEBUMPS
       </h2>
-      <div className="mt-2 h-[1px] w-24 bg-[#D9D5CF]" />
+      <div className="h-[2.5px] w-30 bg-[#D9D5CF]" />
 
       {/* body copy */}
-      <p className="mt-8 font-lora text-[18px] md:text-[19px] leading-[1.9]">
+      <p className="mt-6 font-lora text-[18px] md:text-[19px] leading-[1.9]">
         Wedding Goosebump is a premier wedding designing and planning studio
         based in India, specializing in crafting soul-stirring luxury
         destination weddings across Europe, the Middle East, and India. From
@@ -28,7 +28,7 @@ const OfferingsSection = () => (
       </p>
 
       {/* offerings link */}
-      <Link href="/offerings" className="inline-block mt-10">
+      <Link href="/offerings" className="inline-block mt-2">
         <span className="font-commuter-sans text-[12px] uppercase tracking-[0.3em] text-gold border-b-[1.5px] border-gold pb-1">
           OUR OFFERINGS
         </span>
