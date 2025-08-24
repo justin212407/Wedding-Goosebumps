@@ -11,7 +11,7 @@ const data = galleries as Record<string, Img[]>;
 
 export default function GallerySlugPage({ params }: { params: { slug: string } }) {
   const images = data[params.slug];
-  if (!images) return notFound();
+  if (!images) notFound();
 
   return (
     <main className="bg-ivory text-charcoal">
