@@ -59,11 +59,6 @@ export default function Footer() {
             <p className="mb-2 md:mb-0">
               copyright 2025 wedding goosebumps
             </p>
-            <p>
-              <a href="https://withgraceandgold.com/" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors duration-300">
-                brand and web design by with grace and gold
-              </a>
-            </p>
           </div>
         </div>
 

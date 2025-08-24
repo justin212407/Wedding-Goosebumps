@@ -6,38 +6,18 @@ import Navigation from "@/components/sections/navigation";
 import Footer from "@/components/sections/footer";
 
 const HERO = {
-  src: "/galleries-page/slide1/main", // change to your preferred image
-  width: 600,                  // use the image's real dimensions if you can
-  height: 800,
+  src: "/about-page/slide1/1.jpg", // keep as-is (add extension if needed)
+  width: 1200,
+  height: 1400,
   alt: "Elegant outdoor table setting",
 };
-
-/**
- * ASSETS
- * Place files in /public/galleries/…  (or change the paths below)
- *
- * /public/galleries/hero-1.jpg
- * /public/galleries/hero-2.jpg
- * /public/galleries/hero-3.jpg
- *
- * /public/galleries/pair-1a.jpg
- * /public/galleries/pair-1b.jpg
- * /public/galleries/pair-2a.jpg
- * /public/galleries/pair-2b.jpg
- *
- * /public/galleries/kind-left-a.jpg
- * /public/galleries/kind-left-b.jpg
- * /public/galleries/kind-right-tall.jpg
- *
- * /public/videos/galleries-hero.mp4
- */
 
 export default function GalleriesPage() {
   return (
     <main className="bg-ivory text-charcoal">
       <Navigation />
 
-      {/* ────────────────────────────── SLIDE 1 — Triple‑image hero */}
+      {/* ────────────────────────────── SLIDE 1 — Triple-image hero */}
       <section className="relative w-screen h-[85vh] lg:h-[100vh] overflow-hidden">
         <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-3">
           <div className="relative">
@@ -64,37 +44,37 @@ export default function GalleriesPage() {
         </div>
       </section>
 
-      {/* ────────────────────────────── SLIDE 2 — Two cards (like reference) */}
+      {/* ────────────────────────────── SLIDE 2 — Two cards */}
       <section className="py-28 md:py-40">
         <div className="mx-auto max-w-[900px] px-6 grid gap-16 md:gap-10 md:grid-cols-2">
           <GalleryCard
             img="/galleries-page/headers/tanya.jpg"
             heading="Crafted with love "
             subheading="Tanya and Aayush"
-            href=""
+            slug="1"
           />
           <GalleryCard
             img="/galleries-page/headers/tatsav.jpg"
             heading="Timeless modern traditions"
             subheading="Tatsav & Vidhi"
-            href="/gallery/elopement-greece"
+            slug="2"
           />
           <GalleryCard
             img="/galleries-page/headers/ashish.jpg"
             heading="Ethereal floral elegance"
-            subheading="Shashank & Muskan"
-            href="/gallery/destination-languedoc"
+            subheading="Ashish and Juhi"
+            slug="3"
           />
           <GalleryCard
             img="/galleries-page/headers/harshil.jpg"
             heading="Vibrant wedding luxury"
-            subheading="Harshil & Akanksha"
-            href="/gallery/elopement-greece"
+            subheading="Shashank & Muskan"
+            slug="4"
           />
         </div>
       </section>
 
-      {/* ────────────────────────────── SLIDE 3 — Full‑bleed video */}
+      {/* ────────────────────────────── SLIDE 3 — Full-bleed video */}
       <section className="relative w-screen h-[70vh] md:h-[100vh] overflow-hidden">
         <video
           className="absolute inset-0 w-full h-full object-cover"
@@ -107,91 +87,119 @@ export default function GalleriesPage() {
         <div className="absolute inset-0 bg-black/20" />
       </section>
 
-      {/* ────────────────────────────── SLIDE 2 — Two cards (like reference) */}
+      {/* ────────────────────────────── SLIDE 2 — Two cards */}
       <section className="py-18 md:py-24">
         <div className="mx-auto max-w-[900px] px-6 grid gap-16 md:gap-10 md:grid-cols-2">
-        <GalleryCard
+          <GalleryCard
             img="/galleries-page/headers/mohit.jpg"
             heading="Culture meets joy"
             subheading="Mohit & Hitika"
-            href="/gallery/elopement-greece"
+            slug="5"
           />
           <GalleryCard
             img="/galleries-page/headers/dharam.jpg"
             heading="A majestic romance"
-            subheading="Dharam & Rajivi"
-            href="/gallery/elopement-greece"
+            subheading="Harshil & Akanksha"
+            slug="6"
           />
           <GalleryCard
             img="/galleries-page/headers/saval.jpg"
             heading="Royal timeless luxury"
-            subheading="Saval & Romil"
-            href="/gallery/elopement-greece"
+            subheading="Dharam & Rajivi "
+            slug="7"
           />
           <GalleryCard
             img="/galleries-page/headers/mukesh.jpg"
             heading="Love through laughter"
-            subheading="Mukesh & Yamini"
-            href="/gallery/elopement-greece"
+            subheading="Saval & Romil "
+            slug="8"
           />
           <GalleryCard
             img="/galleries-page/headers/ivan.jpg"
             heading="A global love"
             subheading="Ivan & Maria"
-            href="/gallery/elopement-greece"
+            slug="9"
           />
           <GalleryCard
             img="/galleries-page/headers/riya.jpg"
-            heading="Heritage in elegance"
-            subheading=" Riya & Shivam"
-            href="/gallery/elopement-greece"
+            heading="Heritage in elegance"
+            subheading="Mukesh and Yamini"
+            slug="10"
           />
         </div>
       </section>
 
-  return (
-    <section className="bg-ivory pt-24 lg:pt-32 pb-16">
-      {/* — Heading & intro copy */}
-      <div className="container mx-auto px-6 lg:px-8 text-center mb-6">
-        <h3 className="font-commuter-sans font-normal text-sm uppercase tracking-[0.3em] text-charcoal mb-1">
-          WE CREATE
-        </h3>
+      <section className="bg-ivory pt-24 lg:pt-32 pb-16">
+        {/* — Heading & intro copy */}
+        <div className="container mx-auto px-6 lg:px-8 text-center mb-2">
+          <h3 className="font-commuter-sans font-normal text-sm uppercase tracking-[0.3em] text-charcoal mb-1">
+            WE CREATE
+          </h3>
 
-        <h2 className="font-[Epicene_Display] font-light uppercase text-charcoal text-4xl lg:text-5xl xl:text-6xl mb-2 leading-tight tracking-tight">
-          <span className="font-cormorant" style={{ fontWeight: 60 }}>
-            unforgettable
-          </span>{" "}
-          <span className="font-cormorant" style={{ fontWeight: 60 }}>
-            experiences
-          </span>
-        </h2>
+          <h2 className="font-[Epicene_Display] font-light uppercase text-charcoal text-4xl lg:text-5xl xl:text-6xl mb-2 leading-tight tracking-tight">
+            <span className="font-cormorant" style={{ fontWeight: 60 }}>
+              unforgettable
+            </span>{" "}
+            <span className="font-cormorant" style={{ fontWeight: 60 }}>
+              experiences
+            </span>
+          </h2>
 
-        <p className="mx-auto max-w-2xl font-lora text-lg leading-relaxed text-charcoal">
-          Wedding Goosebumps is a full-service{" "}
-          <em className="italic">luxury wedding design and planning studio,</em>{" "}
-          crafting emotionally immersive, couture destination weddings across
-          the world’s most iconic locations.
-        </p>
-      </div>
+          <p className="mx-auto max-w-2xl font-lora text-lg leading-relaxed text-charcoal">
+            Wedding Goosebumps is a full-service{" "}
+            <em className="italic">luxury wedding design and planning studio,</em>{" "}
+            crafting emotionally immersive, couture destination weddings across
+            the world’s most iconic locations.
+          </p>
+        </div>
 
-      {/* — Single image, centered, responsive, no cropping */}
-      <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
-        <figure className="relative w-full">
-          <Image
-            src={HERO.src}
-            alt={HERO.alt}
-            width={HERO.width}
-            height={HERO.height}
-            // No cropping: keep natural aspect ratio
-            className="w-full h-auto max-h-[60vh] object-contain" 
-            priority
-          />
-        </figure>
-      </div>
+        {/* — Single image, centered, responsive, no cropping */}
+        <div className="mx-auto max-w-[1200px] px-3 lg:px-5">
+          <figure className="relative w-full">
+            <Image
+              src={HERO.src}
+              alt={HERO.alt}
+              width={HERO.width}
+              height={HERO.height}
+              className="w-full h-auto max-h-[60vh] object-contain"
+              priority
+            />
+          </figure>
+        </div>
       </section>
-    );
 
-      {/* ────────────────────────────── SLIDE 3 — Full‑bleed video */}
+      <section className="bg-ivory text-charcoal py-13 sm:py-23">
+        <div className="max-w-4xl mx-auto px-8">
+          <h2 className="font-commuter-sans text-[13px] uppercase tracking-[0.3em] text-charcoal/80">
+            ABOUT WEDDING GOOSEBUMPS
+          </h2>
+          <div className="h-[2.5px] w-30 bg-[#D9D5CF]" />
+
+          <p className="mt-6 font-lora text-[18px] md:text-[19px] leading-[1.9]">
+            Wedding Goosebump is a premier wedding designing and planning studio
+            based in India, specializing in crafting soul-stirring luxury
+            destination weddings across Europe, the Middle East, and India. From
+            the shores of Lake Como to the royal palaces of Rajasthan,&nbsp;
+            <em className="italic">
+              we turn once-in-a-lifetime moments into emotionally immersive
+              celebrations.
+            </em>{" "}
+            We take the stress out of planning a wedding away from home. Our expert
+            team bridges cultures, languages, and local nuances — handling
+            everything from logistics to luxury detailing with precision and heart.
+            Whether you dream of a cliffside vow in Santorini or a regal baraat in
+            Jaipur, we’re here to turn your vision into goosebump-worthy reality.
+          </p>
+
+          <Link href="/offerings" className="inline-block mt-2">
+            <span className="font-commuter-sans text-[12px] uppercase tracking-[0.3em] text-gold border-b-[1.5px] border-gold pb-1">
+              OUR OFFERINGS
+            </span>
+          </Link>
+        </div>
+      </section>
+
+      {/* ────────────────────────────── SLIDE 3 — Full-bleed video */}
       <section className="relative w-screen h-[70vh] md:h-[100vh] overflow-hidden">
         <video
           className="absolute inset-0 w-full h-full object-cover"
@@ -203,7 +211,6 @@ export default function GalleriesPage() {
         />
         <div className="absolute inset-0 bg-black/20" />
       </section>
-
 
       <Footer />
     </main>
@@ -215,18 +222,18 @@ function GalleryCard({
   img,
   heading,
   subheading,
-  href,
+  slug, // ← use slug instead of href
 }: {
   img: string;
   heading: string;
   subheading: string;
-  href: string;
+  slug: string;
 }) {
   return (
     <article>
-      <Link href={href} className="group block">
+      <Link href={`/galleries/${slug}`} className="group block">
         <div className="relative w-full aspect-[3/4] bg-[#efe9df] overflow-hidden">
-          {/* Use object-contain so images don’t get cropped; change to object-cover if you prefer */}
+          {/* Keep object-cover here for thumbnail styling */}
           <Image src={img} alt={heading} fill className="object-cover group-hover:scale-[1.01] transition-transform" />
         </div>
 
@@ -234,7 +241,6 @@ function GalleryCard({
           {heading}
         </h3>
 
-        {/* thin underline */}
         <div className="mt-3 h-[2px] w-16 bg-charcoal/15" />
 
         <p className="mt-3 text-[12px] tracking-[0.25em] uppercase text-charcoal/70">
