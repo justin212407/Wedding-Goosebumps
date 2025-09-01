@@ -2,6 +2,7 @@
 import { cn } from "@/lib/utils";
 import { IconChevronDown, IconMenu2, IconX } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
+import type { Transition } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -214,7 +215,7 @@ const Logo = () => {
   );
 };
 
-const transition = {
+const transition: Transition = {
   type: "spring",
   mass: 0.5,
   damping: 11.5,

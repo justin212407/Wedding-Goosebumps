@@ -11,7 +11,7 @@ export function HeroWithCenteredImage() {
       <motion.div
         initial={{ y: 40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ ease: "easeOut", duration: 0.5 }}
+        transition={{ type: "tween", ease: "easeOut", duration: 0.2 }}
         className="flex justify-center"
       >
         <Badge
@@ -25,7 +25,7 @@ export function HeroWithCenteredImage() {
       <motion.h1
         initial={{ y: 40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ ease: "easeOut", duration: 0.5 }}
+        transition={{ type: "tween", ease: "easeOut", duration: 0.2 }}
         className="relative z-10 mx-auto mt-6 max-w-6xl text-center text-2xl font-semibold text-black md:text-4xl lg:text-8xl dark:text-white"
       >
         One-stop solution for all your content needs

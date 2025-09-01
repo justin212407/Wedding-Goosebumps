@@ -20,7 +20,7 @@ const Background = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1, ease: "easeOut" }}
+      transition={{ type: "tween", ease: "easeOut", duration: 0.2 }}
       className="pointer-events-none absolute inset-0 z-0 h-full w-full overflow-hidden dark:opacity-20"
     >
       <video

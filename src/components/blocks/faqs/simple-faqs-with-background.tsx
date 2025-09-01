@@ -117,7 +117,7 @@ const FAQItem = ({
                 initial={{ height: 0 }}
                 animate={{ height: "auto" }}
                 exit={{ height: 0 }}
-                transition={{ duration: 0.2, ease: "easeOut" }}
+                transition={{ type: "tween", ease: "easeOut", duration: 0.2 }}
                 className="overflow-hidden text-neutral-500 dark:text-neutral-400"
               >
                 {answer.split("").map((line, index) => (

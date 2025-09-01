@@ -60,7 +60,7 @@ const MovingLine = () => {
               damping: 100,
             }),
           }}
-          transition={transition}
+          transition={{ ...transition, ease: [0.25, 0.1, 0.25, 1] }}
           d={PATH}
           stroke="var(--blue-500)"
           strokeOpacity="1"

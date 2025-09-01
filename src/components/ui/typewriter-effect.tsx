@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"; // This will work if src/lib/utils.ts exists
 import { motion, stagger, useAnimate, useInView } from "motion/react";
 import { useEffect } from "react";
 

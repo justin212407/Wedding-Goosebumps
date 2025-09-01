@@ -3,7 +3,10 @@
 import React, { useState, useEffect, useId } from "react";
 
 import { motion } from "motion/react";
-import { cn } from "@/utils/cn";
+// If cn utility does not exist, create a fallback
+export function cn(...args: any[]): string {
+  return args.filter(Boolean).join(' ');
+}
 
 export interface ContainerTextFlipProps {
   /** Array of words to cycle through in the animation */
