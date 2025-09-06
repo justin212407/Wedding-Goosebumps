@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 import path from "node:path";
 
 const isVercel = process.env.VERCEL === "1";
-const BLOB_HOST = process.env.NEXT_PUBLIC_BLOB_HOST; // 👈 add this
+const ASSET_HOST = process.env.NEXT_PUBLIC_ASSET_BASE!; // R2 CDN
 
 const LOADER = path.resolve(
   __dirname,
@@ -15,38 +15,27 @@ const nextConfig: NextConfig = {
   typescript: { ignoreBuildErrors: true },
 
   images: {
-    // unoptimized: true, // (optional bailout)
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
-      // Allow Blob host explicitly (recommended)
-      { protocol: "https", hostname: "*.public.blob.vercel-storage.com" },
-      // Keep your broad allowance if you prefer
-      { protocol: "https", hostname: "**" },
-      { protocol: "http", hostname: "**" },
+      { protocol: "https", hostname: "img.weddinggoosebumps.com" },
     ],
   },
 
-  // 👇 add rewrites so /public/* paths proxy to Blob
   async rewrites() {
     return [
-      { source: "/logo/:path*",           destination: `${BLOB_HOST}/logo/:path*` },
-      { source: "/about/:path*",          destination: `${BLOB_HOST}/about/:path*` },
-      { source: "/about-page/:path*",     destination: `${BLOB_HOST}/about-page/:path*` },
-      { source: "/galleries-page/:path*", destination: `${BLOB_HOST}/galleries-page/:path*` },
-      { source: "/gallery/:path*",        destination: `${BLOB_HOST}/gallery/:path*` },
-      // add other top-level public folders later if you start using them
+      { source: "/logo/:path*",           destination: `${ASSET_HOST}/logo/:path*` },
+      { source: "/about/:path*",          destination: `${ASSET_HOST}/about/:path*` },
+      { source: "/about-page/:path*",     destination: `${ASSET_HOST}/about-page/:path*` },
+      { source: "/galleries-page/:path*", destination: `${ASSET_HOST}/galleries-page/:path*` },
+      { source: "/gallery/:path*",        destination: `${ASSET_HOST}/gallery/:path*` },
+      { source: "/offerings-page/:path*", destination: `${ASSET_HOST}/offerings-page/:path*` },
+      // add any other top-level folders you actually use
     ];
   },
 
-  ...(isVercel
-    ? {}
-    : {
-        turbopack: {
-          rules: {
-            "*.{jsx,tsx}": { loaders: [LOADER] },
-          },
-        },
-      }),
+  ...(isVercel ? {} : {
+    turbopack: { rules: { "*.{jsx,tsx}": { loaders: [LOADER] } } },
+  }),
 
   webpack: (config) => {
     config.resolve.alias = config.resolve.alias || {};
