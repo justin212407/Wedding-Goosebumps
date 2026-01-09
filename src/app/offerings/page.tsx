@@ -502,9 +502,9 @@ export default function OfferingsPage() {
       </section>
 
       {/* Final Video Section - Responsive */}
-      <section className="relative w-full h-[48vh] sm:h-[64vh] lg:h-[80vh] overflow-hidden">
+      <section className="relative w-full h-[48vh] sm:h-[64vh] lg:h-[80vh] overflow-hidden mb-16 sm:mb-20 md:mb-24">
         <video className="absolute inset-0 w-full h-full object-cover" src="/videos/offerings-page-vids/DHARAM RAJVI WED HIGHLIGHT 4K 20 sec 25.mp4" autoPlay muted loop playsInline />
-        <div className="absolute inset-0 bg-black/25" />
+        <div className="absolute inset-0 bg-black/25 pb-40" />
       </section>
 
       <Footer />

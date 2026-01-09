@@ -22,7 +22,7 @@ const navLinks = [
 export default function Footer() {
   return (
     <footer className="bg-ivory text-charcoal font-lora">
-      <div className="container mx-auto px-2 sm:px-4 md:px-6 pt-1 sm:pt-2 md:pt-3 pb-4 sm:pb-6 text-center">
+      <div className="container mx-auto px-4 sm:px-6 md:px-10 pt-2 sm:pt-4 md:pt-6 pb-6 sm:pb-8 text-center">
 
         {/* Navigation Links Above Images */}
         <nav className="mb-10 sm:mb-[3.5rem]">

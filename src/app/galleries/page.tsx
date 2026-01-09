@@ -219,7 +219,7 @@ export default function GalleriesPage() {
   </section>
 
       {/* ────────────────────────────── SLIDE 3 — Full-bleed video */}
-      <section className="relative w-screen h-[70vh] md:h-[100vh] overflow-hidden">
+      <section className="relative w-screen h-[70vh] md:h-[100vh] overflow-hidden mb-16 sm:mb-20 md:mb-24">
         <video
           className="absolute inset-0 w-full h-full object-cover"
           src="/videos/gallery-page-vids/YASH NISHI WED HIGHLIGHT 20 sec 9.mp4"
