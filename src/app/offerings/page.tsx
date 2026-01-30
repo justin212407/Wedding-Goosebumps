@@ -107,7 +107,7 @@ export default function OfferingsPage() {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 flex items-center justify-center px-3">
+        <div className="absolute inset-0 flex items-center justify-center px-3 pt-43">
           <div className="text-center max-w-3xl">
             <h1 className="font-epicene-display text-white uppercase leading-tight text-[20px] sm:text-[26px] md:text-[34px] lg:text-[42px] drop-shadow">
               FULL SERVICE<br />
